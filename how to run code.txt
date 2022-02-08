@@ -1,0 +1,15 @@
+20213581 정재우
+
+How to run file:
+1. Calibrate stereo view cameras using 'Camera Calibration.m' with matlab
+	1. a. Modify path to your path with camera calibration images
+	1. b. Run the code, manually pin the calibration images and input the corresponding 3D coordinates 
+	1. c. Record camera calibration matrix (camera_K) and baseline (baseline)
+2. Run 'VisualOdometry.py' with python
+	2. a. Modify path to your path with stereo view images (line 269)
+	2. b. Adjust number of frames to calculate disparity (line 266)
+	2. c. Modify 'K', 'focal_length', 'baseline' variable with acquired values from part 1. focal length is abs(K[0,0]). (lines 315~321)
+	2. d. Input number of features and threshold values you want to try (lines 312, 313)
+	2. e. Adjust other parameters if wanted (ex. red box masking param)
+	2. f. Double check the path to left view images (line 347)
+	2. g. modify output path (line 616)
